@@ -14,7 +14,7 @@
 
   <tbody>
     <% @blogs.each do |blog| %>
-
+      <%= render 'blog', blog: blog %>
     <% end %>
   </tbody>
 </table>
