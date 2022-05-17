@@ -1,0 +1,6 @@
+ja:
+  hello: "こんにちは"
+  activerecord:
+    models:
+      blog: "ブログ"
+      task: "タスク"
