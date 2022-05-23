@@ -13,5 +13,8 @@ class Book < ApplicationRecord
     too_long: "タイトルは最大12桁です",
     too_short: "タイトルは最小8桁です"
   }
+  # numericality
+  validates :price, numericality: { only_integer: true }
+  validates :number, numericality: { only_integer: true }
 
 end
