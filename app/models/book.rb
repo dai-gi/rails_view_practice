@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
-  # TODAY = Time.now.midnight
-  # scope :today_search, -> {where(created_at: TODAY..TODAY.tomorrow)}
+  TODAY = Time.now.midnight
+  scope :today_search, -> {where(created_at: TODAY..TODAY.tomorrow)}
 
   # 引数を利用する
   # scope :title_search, ->(title) {where(title: title)}
@@ -25,18 +25,18 @@ class Book < ApplicationRecord
   # validates :number, uniqueness: true
 
   # コールバックの実行を止める
-  before_destroy :destroy_prework
-  after_destroy :destroy_afterwork
+  # before_destroy :destroy_prework
+  # after_destroy :destroy_afterwork
 
   # private
 
-  def destroy_prework
-    puts "削除前です"
-  end
+#   def destroy_prework
+#     puts "削除前です"
+#   end
 
-  def destroy_afterwork
-    puts "削除後です"
-    throw :abort
-  end
+#   def destroy_afterwork
+#     puts "削除後です"
+#     throw :abort
+#   end
 
 end
