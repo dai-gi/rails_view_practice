@@ -18,7 +18,7 @@ class Book < ApplicationRecord
   # }
 
   # numericality
-  # validates :price, numericality: { only_integer: true }
+  validates :price, numericality: { only_integer: true }
   # validates :number, numericality: { only_integer: true }
 
   # uniqueness
